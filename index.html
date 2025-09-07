@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bar Lotus — Cocktails en Támesis</title>
+  <meta name="description" content="Bar Lotus en Támesis, Antioquia. WhatsApp, Instagram y nuestra historia con fotos en una sola página." />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bar Lotus — Cocktails" />
+  <meta property="og:description" content="Tu punto de encuentro en Támesis, Antioquia. Escribinos por WhatsApp o mirá Instagram." />
+  <meta property="og:image" content="Logo.jpeg" />
+  <meta name="theme-color" content="#0e0d0b" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0f1113;             /* fondo principal */
+      --paper:#141619;          /* paneles */
+      --ink:#f5f3ee;            /* texto principal (tinta) */
+      --muted:#c9c4b8;          /* texto secundario */
+      --gold:#d9b36f;           /* acento dorado vintage */
+      --gold-2:#b89459;         /* dorado oscuro */
+      --line:#262728;           /* líneas finas */
+      --radius:20px;
+      --shadow: 0 10px 30px rgba(0,0,0,.45);
+      --maxw: 1040px;
+    }
+    html{scroll-behavior:smooth}
+    body{margin:0; background:
+      radial-gradient(1000px 500px at 10% -10%, rgba(217,179,111,.06), transparent),
+      radial-gradient(800px 400px at 100% 0%, rgba(185,148,89,.05), transparent),
+      var(--bg); color:var(--ink); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;}
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:28px 18px}
+
+    h1, h2, .brandmark{font-family: 'Playfair Display', Georgia, 'Times New Roman', serif; letter-spacing:.3px}
+
+    /* —— HERO (menú con logo y botones) —— */
+    .hero{display:grid; place-items:center; text-align:center; min-height:100vh; padding:32px 18px 24px}
+    .panel{max-width:540px; width:min(92vw, 540px); text-align:center; display:flex; flex-direction:column; gap:18px}
+    .logo{width:160px; height:160px; border-radius:999px; object-fit:cover; margin:0 auto; box-shadow:var(--shadow);
+      border:2px solid var(--gold-2); background:#1b1b1b}
+    .brandmark{font-size: clamp(30px, 6vw, 44px); margin:0}
+    .tagline{color:var(--muted); font-size:15px}
+
+    .cta{display:flex; flex-direction:column; gap:12px; margin-top:6px}
+    .btn{display:flex; align-items:center; justify-content:center; gap:10px; padding:15px 18px; border-radius:999px; font-weight:700; text-decoration:none;
+      border:1px solid var(--gold-2); background:var(--gold); color:#0b0b0b; box-shadow:var(--shadow); transition: transform .08s ease}
+    .btn:active{transform:scale(.98)}
+    .btn.outline{background:transparent; color:var(--ink); border:1px solid #2a2a2a}
+    .btn.ghost{background:linear-gradient(135deg, #1a1b1d, #121316); color:var(--ink); border:1px solid #262728}
+
+    /* —— PARTE 2 (historia + fotos, otra pantalla) —— */
+    .site{min-height:100vh; padding:60px 0 90px}
+    .grid{display:grid; gap:18px; align-items:stretch}
+    @media (min-width: 860px){ .grid{grid-template-columns: 1.15fr .85fr} }
+    .card{background:var(--paper); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:20px; display:flex; flex-direction:column; height:100%}
+    .about h2{margin:0 0 8px; font-size: clamp(26px, 4.6vw, 34px)}
+    .about p{line-height:1.7; color:#efece4}
+    .meta{margin-top:12px; color:var(--muted); font-size:15px}
+    .meta a{color:var(--gold)}
+
+    .photos{display:grid; grid-template-columns: 1fr 1fr; gap:12px; height:100%}
+    .photos img{width:100%; height:190px; object-fit:cover; border-radius:14px; background:#111}
+    @media (min-width: 860px){ .photos img{height:230px} }
+
+    .back-top{position:fixed; right:16px; bottom:16px; z-index:60; 
+      opacity:0; transform:translateY(16px); pointer-events:none; transition: opacity .2s ease, transform .2s ease;}
+    .back-top.visible{opacity:1; transform:translateY(0); pointer-events:auto}
+    .back-top a{display:grid; place-items:center; width:52px; height:52px; background:var(--gold); color:#0b0b0b; border-radius:999px; text-decoration:none; box-shadow:var(--shadow); border:1px solid var(--gold-2)}
+    .back-top svg{stroke:#0b0b0b}
+
+    footer{color:var(--muted); font-size:12px; text-align:center; padding:28px 10px}
+    footer a{color:var(--gold)}
+  </style>
+</head>
+<body>
+  <!-- HERO / MENÚ PRINCIPAL (primero) -->
+  <section id="top" class="hero">
+    <div class="panel">
+      <img src="Logo.jpeg" class="logo" alt="Logo de Bar Lotus" width="160" height="160" />
+      <h1 class="brandmark">Bar Lotus</h1>
+      <p class="tagline">Cocktails — Estilo clásico con alma de autor</p>
+      <nav class="cta" aria-label="Acciones principales">
+        <a class="btn" href="https://www.instagram.com/bar.lotus1/?utm_source=landing&utm_medium=button&utm_campaign=principal" target="_blank" rel="noopener" aria-label="Abrir Instagram de Bar Lotus">Instagram</a>
+        <a class="btn outline" href="https://wa.me/573127192006?text=Hola%2C%20vengo%20desde%20la%20landing%20de%20Bar%20Lotus.%20%C2%BFTienen%20lugar%20hoy%3F" target="_blank" rel="noopener" aria-label="Abrir WhatsApp de Bar Lotus">WhatsApp</a>
+        <a class="btn ghost" href="#parte-2" aria-label="Ver historia y fotos">Ver sitio</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- PARTE 2: historia + fotos (otra pantalla) -->
+  <section id="parte-2" class="site">
+    <div class="wrap">
+      <div class="grid">
+        <article class="about card" aria-labelledby="about-title">
+          <h2 id="about-title">Nuestra historia</h2>
+          <p>
+            Nacimos de la pasión por la mixología y las charlas largas. En <strong>Bar Lotus</strong> honramos lo clásico con un 
+            espíritu de autor, trabajando insumos frescos de la región de <strong>Támesis, Antioquia</strong>.
+          </p>
+          <p>
+            Vení por nuestro cocktail de la casa, quedate por el ambiente. Para reservas o consultas, escribinos por WhatsApp.
+          </p>
+          <div class="meta">
+            Támesis, Antioquia · <a href="https://www.google.com/maps/search/?api=1&query=T%C3%A1mesis%2C%20Antioquia" target="_blank" rel="noopener">Cómo llegar</a>
+            · <a href="https://www.instagram.com/bar.lotus1/?utm_source=landing&utm_medium=link&utm_campaign=sitio" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </article>
+        <aside class="card">
+          <div class="photos" aria-label="Galería de fotos">
+            <img src="Vista-exterior.jpeg" alt="Vista exterior de Bar Lotus" loading="lazy" />
+            <img src="Vista-interior.jpeg" alt="Vista interior de Bar Lotus" loading="lazy" />
+            <img src="Cantina.jpeg" alt="Barra y cantina de Bar Lotus" loading="lazy" />
+            <img src="Ron.jpg" alt="Coctel Ron de la casa en Bar Lotus" loading="lazy" />
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <div class="back-top">
+      <a href="#top" aria-label="Volver al menú">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="y">2025</span> Bar Lotus · Támesis, Antioquia
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // --- Back to Top Button Logic ---
+      const backTopButton = document.querySelector('.back-top');
+      const heroSection = document.querySelector('#top');
+      
+      if (backTopButton && heroSection) {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            // If hero section is NOT on screen, show the button
+            if (!entry.isIntersecting) {
+              backTopButton.classList.add('visible');
+            } else {
+              backTopButton.classList.remove('visible');
+            }
+          });
+        }, {
+          // Trigger when the hero is about 80% off-screen
+          threshold: 0.2
+        });
+        
+        observer.observe(heroSection);
+      }
+  
+      // --- Dynamic Year for Footer ---
+      const yearSpan = document.getElementById('y');
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+</body>
+</html>
+
